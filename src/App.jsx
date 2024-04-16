@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Spammed from './components/pages/spammed';
 import Bank from './components/pages/bank';
-import Order from './components/pages/order';
 import Settings from './components/pages/settings';
 import Cardorder from './components/pages/Cardorder';
 import Support from './components/pages/support';
@@ -67,7 +66,7 @@ function App() {
             <Route path='/' element={<Cardorder />} />
             <Route path='/spammed' element={<Spammed />} />
             <Route path='/bank' element={<Bank />} />
-            <Route path='/order' element={<Order />} />
+            
             <Route path='/settings' element={<Settings userInfo={userInfo} onLogout={handleLogout} />} />
             <Route path='/support' element={<Support />} />
             <Route path='/shoppingcart' element={<Shoppingcart />} />

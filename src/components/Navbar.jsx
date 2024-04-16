@@ -33,9 +33,7 @@ const Navbar = () => {
         <li>
           <Link to="/bank">Bank</Link>
         </li>
-        <li>
-          <Link to="/order">Order</Link>
-        </li>
+
         <li>
           <Link to="/settings">Settings</Link>
         </li>
