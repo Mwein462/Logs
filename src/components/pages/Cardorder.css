@@ -1,0 +1,25 @@
+.cardorder-container {
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in forwards;
+}
+
+.bold-heading {
+  color: black;
+  font-weight: bold;
+}
+
+@keyframes fadeInOutAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeInOutAnimation 2s ease-in-out infinite;
+}

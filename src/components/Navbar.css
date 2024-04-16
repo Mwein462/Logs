@@ -1,0 +1,128 @@
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+.Title {
+  display: flex;
+  color: gold;
+  text-decoration: none;
+}
+
+.Title:hover {
+  color: white;
+}
+
+.Title-box {
+  display: flex;
+  padding: 10px 20px;
+  border: 2px solid gold;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.Title-box:hover {
+  border-color: gold;
+  background-color: gold;
+}
+.nav-links li.user-info {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav-links li.user-info span {
+  color: white;
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+.nav-links li.user-info span.username {
+  color: gold;
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: gold;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(153, 15, 15);
+  margin: 6px 0;
+  transition: transform 0.3s ease;
+}
+
+.open .hamburger:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.open .hamburger:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    width: auto; /* Adjust width as needed */
+    background-color: #333;
+    top: 0; /* Adjust top positioning as needed */
+    right: -200px; /* Hide initially off-screen */
+    z-index: 1000;
+    text-align: left;
+    transition: right 0.3s ease; /* Add transition for smooth animation */
+  }
+
+  .nav-links.open {
+    right: 0; /* Move nav-links to the right to show */
+    display: block;
+  }
+
+  .nav-links li {
+    display: block; /* Display list items as block elements */
+    margin: 10px 0; /* Add some spacing between list items */
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Position menu-toggle on the right side */
+    z-index: 2000;
+  }
+  .below-navbar-content {
+    margin-top: 80px; /* Adjust margin-top to accommodate navbar height */
+  }
+
+
+}
+
+  
+

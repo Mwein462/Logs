@@ -1,0 +1,156 @@
+/* Style for the input field containers */
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the input fields and selects */
+input[type="text"],
+select {
+  margin: 5px;
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Style for the first input */
+input[type="text"]:first-of-type {
+  background-color: black;
+}
+
+/* Style for other inputs and selects */
+div > div {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+/* Style for the select dropdown */
+select {
+  background-color: grey;
+}
+
+/* Style for the select dropdown options */
+select option {
+  background-color: grey;
+}
+
+/* Styling for table */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  color: white;
+}
+
+th {
+  background-color: black;
+}
+
+/* Apply horizontal lines to differentiate rows */
+tr:nth-child(even) {
+  background-color: #222; /* dark gray */
+}
+
+tr:nth-child(odd) {
+  background-color: #444; /* light gray */
+}
+
+/* CSS for the purchase button */
+button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for the button */
+button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Modal container */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px; /* Adjust this value according to your navbar height */
+  left: 50%;
+  width: 50%;
+  height: 60%;
+  background-color: rgb(44, 42, 42); /* Semi-transparent background */
+  z-index: 9999; /* Ensure the modal appears above other content */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: rgb(230, 212, 212);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%; /* Adjust the maximum width of the modal */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds modal height */
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  color: rgb(255, 0, 0);
+  right: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  /* Adjust width of input fields and selects */
+  input[type="text"],
+  select {
+    width: 70%;
+  }
+
+  /* Adjust width of table */
+  table {
+    width: 100%;
+  }
+
+  /* Adjust width and height of modal */
+  .modal {
+    width: 90%;
+    height: 70%;
+  }
+}
+/* Media query for screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  /* Adjust width of input fields and selects */
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 8px;
+  }
+
+  /* Adjust width of table */
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  /* Adjust width and height of modal */
+  .modal {
+    width: 95%;
+    height: 80%;
+  }
+}

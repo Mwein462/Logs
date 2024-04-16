@@ -1,0 +1,39 @@
+/* Shoppingcart.css */
+
+.shopping-cart-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.shopping-cart-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.total-price {
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.purchase-button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
