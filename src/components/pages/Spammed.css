@@ -167,6 +167,7 @@ button:hover {
   /* Adjust table layout for smaller screens */
   table {
     width: 100%;
+    overflow-x: auto; /* Add horizontal scrolling */
   }
 
   th, td {
