@@ -90,11 +90,6 @@ button:hover {
   background-color: #0056b3; /* Darker blue color on hover */
 }
 
-/* Hover effect for the button */
-button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
-}
-
 /* Modal container */
 .modal {
   display: flex;
@@ -173,5 +168,6 @@ button:hover {
   th, td {
     padding: 6px; /* Decrease padding for smaller screens */
     font-size: 12px; /* Decrease font size for smaller screens */
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 }
