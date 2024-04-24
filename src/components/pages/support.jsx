@@ -4,7 +4,8 @@ const Support = () => {
   return (
     <div>
       <h2>Support Team</h2>
-      <p>Text on Telegram for support</p>
+      <p>Text on Telegram for support <a href="https://t.me/cc_order">@Order_card</a> </p>
+      
       <p>Check our Telegram for news and updates</p>
       <p>I WANT TO LEARN CARDING AND WIRE FRAUD</p>
       <p>Get to learn how to spam and cashout cards and bank logs. Everything is hands-on so get ready to get your hands dirty.</p>
@@ -24,7 +25,7 @@ const Support = () => {
         <li>Updated fraud bible every month</li>
         <li>Many more benefits</li>
       </ol>
-      <p>TEXT AT (link) to enroll.</p>
+      <p>TEXT AT <a href="https://t.me/cc_order">@Order_card</a> to enroll.</p>
     </div>
   );
 };

@@ -4,6 +4,16 @@ div {
   flex-direction: column;
   align-items: center;
 }
+p {
+  color: black;
+  font-style: italic;
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the paragraph horizontally */
+  padding: 10px; /* Add padding for better readability */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  word-wrap: break-word; /* Allow long words to break */
+}
 
 /* Style for the input fields and selects */
 input[type="text"],
@@ -122,10 +132,6 @@ button:hover {
     width: 70%;
   }
 
-  /* Adjust width of table */
-  table {
-    width: 100%;
-  }
 
   /* Adjust width and height of modal */
   .modal {
@@ -142,15 +148,40 @@ button:hover {
     padding: 8px;
   }
 
-  /* Adjust width of table */
-  table {
-    width: 100%;
-    font-size: 12px;
-  }
+
 
   /* Adjust width and height of modal */
   .modal {
     width: 95%;
     height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ddd;
+  }
+  table td {
+    display: block;
+    text-align: right;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
   }
 }
