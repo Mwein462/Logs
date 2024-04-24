@@ -90,6 +90,11 @@ button:hover {
   background-color: #0056b3; /* Darker blue color on hover */
 }
 
+/* Hover effect for the button */
+button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
 /* Modal container */
 .modal {
   display: flex;
@@ -157,31 +162,15 @@ button:hover {
   }
 }
 
+/* Media query for screens smaller than 600px */
 @media screen and (max-width: 600px) {
+  /* Adjust table layout for smaller screens */
   table {
-    border: 0;
+    width: 100%;
   }
-  table thead {
-    display: none;
-  }
-  table tr {
-    margin-bottom: 10px;
-    display: block;
-    border: 1px solid #ddd;
-  }
-  table td {
-    display: block;
-    text-align: right;
-    border: none;
-    position: relative;
-    padding-left: 50%;
-  }
-  table td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 45%;
-    padding-left: 15px;
-    font-weight: bold;
+
+  th, td {
+    padding: 6px; /* Decrease padding for smaller screens */
+    font-size: 12px; /* Decrease font size for smaller screens */
   }
 }
