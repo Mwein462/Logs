@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Spammed from './components/pages/spammed';
@@ -15,6 +15,7 @@ import axios from 'axios'; // Import axios for API requests
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [userInfo, setUserInfo] = useState({});
+  const location = useLocation();
 
   useEffect(() => {
     // Check local storage for authentication data on app load
@@ -23,6 +24,13 @@ function App() {
       const parsedData = JSON.parse(authData);
       setAuthenticated(true);
       setUserInfo(parsedData);
+    }
+
+    // Check if there's a stored path in local storage
+    const storedPath = localStorage.getItem('storedPath');
+    if (storedPath) {
+      // Navigate to the stored path
+      localStorage.removeItem('storedPath'); // Remove the stored path after navigation
     }
   }, []);
 
@@ -41,7 +49,7 @@ function App() {
   
     // Fetch user information from the server after authentication
     try {
-      const res = await axios.get(`https://server-ur97.onrender.com/GetUserInfo/${userData.email}`);
+      const res = await axios.get(`http://localhost:3000/GetUserInfo/${userData.email}`);
       setUserInfo(res.data); // Update user information with data from the server
     } catch (error) {
       console.error('Error fetching user information:', error);
@@ -57,12 +65,17 @@ function App() {
     localStorage.removeItem('authData');
   };
 
+  const handleRouteChange = () => {
+    // Store the current path in local storage
+    localStorage.setItem('storedPath', location.pathname);
+  };
+
   return (
     <div className='App'>
       {authenticated ? (
         <>
           <Navbar userInfo={userInfo} />
-          <Routes>
+          <Routes onChange={handleRouteChange}>
             <Route path='/' element={<Cardorder />} initial={true} />
             <Route path='/spammed' element={<Spammed />} />
             <Route path='/bank' element={<Bank />} />

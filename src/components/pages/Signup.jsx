@@ -23,7 +23,7 @@ function Signup({ onAuthenticate }) {
         }
 
         try {
-            const res = await axios.post("https://server-ur97.onrender.com/Signup", {
+            const res = await axios.post("http://localhost:3000/Signup", {
                 fullName,
                 email,
                 password,
@@ -49,7 +49,7 @@ function Signup({ onAuthenticate }) {
         e.preventDefault();
 
         try {
-            const res = await axios.post("https://server-ur97.onrender.com/Login", {
+            const res = await axios.post("http://localhost:3000/Login", {
                 email,
                 password
             });
