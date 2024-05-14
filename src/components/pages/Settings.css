@@ -1,0 +1,38 @@
+.settings-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.settings-form {
+  margin-bottom: 20px;
+}
+
+.settings-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.settings-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

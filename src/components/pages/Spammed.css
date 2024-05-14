@@ -1,93 +1,47 @@
-/* Style for the input field containers */
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-p {
-  color: black;
-  font-style: italic;
-  width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the paragraph horizontally */
-  padding: 10px; /* Add padding for better readability */
-  box-sizing: border-box; /* Include padding in the width calculation */
-  word-wrap: break-word; /* Allow long words to break */
+/* Spammed.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style for the input fields and selects */
-input[type="text"],
-select {
-  margin: 5px;
-  padding: 10px;
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-}
-
-/* Style for the first input */
-input[type="text"]:first-of-type {
-  background-color: black;
-}
-
-/* Style for other inputs and selects */
-div > div {
-  display: flex;
-  align-items: center;
-  margin: 5px;
-}
-
-/* Style for the select dropdown */
-select {
-  background-color: grey;
-}
-
-/* Style for the select dropdown options */
-select option {
-  background-color: grey;
-}
-
-/* Styling for table */
+/* Table Styles */
 table {
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
-  width: 80%;
+  background-color: #333; /* Dark background color */
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
+table th {
+  text-transform: uppercase;
+  font-weight: bold;
   color: white;
 }
 
-th {
-  background-color: black;
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  color: white;
 }
 
-/* Apply horizontal lines to differentiate rows */
-tr:nth-child(even) {
-  background-color: #222; /* dark gray */
+table tr:nth-child(even) {
+  background-color: #555; /* Alternate row color */
 }
 
-tr:nth-child(odd) {
-  background-color: #444; /* light gray */
-}
-
-/* CSS for the purchase button */
+/* Purchase Button Styles */
 button {
-  padding: 10px 20px;
-  background-color: #007bff; /* Blue color for button */
+  background-color: blue;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  border-radius: 5px; /* Rounded edges */
 }
 
-/* Hover effect for the button */
 button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
+  background-color: darkblue;
 }
 
 /* Modal container */
@@ -123,51 +77,21 @@ button:hover {
   cursor: pointer;
   font-size: 40px;
 }
+.close:hover {
+  color: darkred; /* Close button hover color */
+}
 
-/* Media query for screens smaller than 768px */
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  /* Adjust width of input fields and selects */
-  input[type="text"],
-  select {
-    width: 70%;
+  /* Responsive table styles */
+  table th, table td {
+    font-size: 14px;
+    padding: 6px;
   }
 
-
-  /* Adjust width and height of modal */
-  .modal {
+  /* Modal styles */
+  .modal-content {
     width: 90%;
-    height: 70%;
-  }
-}
-/* Media query for screens smaller than 576px */
-@media screen and (max-width: 576px) {
-  /* Adjust width of input fields and selects */
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 8px;
-  }
-
-
-
-  /* Adjust width and height of modal */
-  .modal {
-    width: 95%;
-    height: 80%;
-  }
-}
-
-/* Media query for screens smaller than 600px */
-@media screen and (max-width: 600px) {
-  /* Adjust table layout for smaller screens */
-  table {
-    width: 100%;
-    overflow-x: auto; /* Add horizontal scrolling */
-  }
-
-  th, td {
-    padding: 6px; /* Decrease padding for smaller screens */
-    font-size: 12px; /* Decrease font size for smaller screens */
-    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 10% auto;
   }
 }

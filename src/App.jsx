@@ -63,7 +63,7 @@ function App() {
         <>
           <Navbar userInfo={userInfo} />
           <Routes>
-            <Route path='/' element={<Cardorder />} />
+            <Route path='/' element={<Cardorder />} initial={true} />
             <Route path='/spammed' element={<Spammed />} />
             <Route path='/bank' element={<Bank />} />
             

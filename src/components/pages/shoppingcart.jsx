@@ -30,7 +30,7 @@ const Shoppingcart = () => {
 
   const handlePurchase = () => {
     let totalPrice = 0;
-    
+
     if (cartItems.length > 0) {
       // Calculate total price based on the source of items
       totalPrice = cartItems.reduce((acc, item) => {
@@ -43,7 +43,9 @@ const Shoppingcart = () => {
       }, 0);
     }
 
-    if (balance < totalPrice) {
+    if (balance <= 0 && totalPrice <= 0) {
+      setErrorMessage('Cannot purchase when Total price is 0.');
+    } else if (balance < totalPrice) {
       setErrorMessage('Error: Insufficient balance. You have insufficient balance in your account. Top up and load your account to make the purchase. Tap the button below "Load Account" to be directed to the balance section.');
     } else {
       // Purchase logic

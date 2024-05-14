@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Settings.css'; // Importing the CSS file for styling
 
 const Settings = ({ userInfo, onLogout }) => {
-  // Check if userInfo is available before accessing its properties
-  const userName = userInfo ? userInfo.email : '';
+  const [currentEmail, setCurrentEmail] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleLogout = () => {
-    // Call the logout function passed from the parent component
-    onLogout();
+    // Check if the current email matches the logged-in user's email
+    if (currentEmail === userInfo.email) {
+      // Call the logout function passed from the parent component
+      onLogout();
+    } else {
+      // Display an error message if the email does not match
+      setErrorMessage('Please enter your current email to logout.');
+    }
   };
 
   return (
-    <div>
-      <h2>Settings</h2>
-      <p>Welcome, {userName}</p>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="settings-container">
+      <h2 className="settings-header">Settings</h2>
+      <p>Welcome, {userInfo.email}</p>
+      <div className="settings-form">
+        <input
+          className="settings-input"
+          type="email"
+          placeholder="Enter your current email"
+          value={currentEmail}
+          onChange={(e) => setCurrentEmail(e.target.value)}
+        />
+        <button className="settings-button" onClick={handleLogout}>Logout</button>
+      </div>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 };

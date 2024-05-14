@@ -2,24 +2,33 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center horizontally */
 }
-
+h2, h3{
+  text-align: center;
+}
 .input-section {
   margin-top: 20px;
+  text-align: center; /* Align input and heading to center */
 }
 
 .payment-method-section {
   margin-top: 20px;
+  text-align: center; /* Align payment method section to center */
 }
 
 .payment-method-section img {
   width: 30px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the image */
 }
 
 .error-message {
   color: red;
   font-size: 14px;
+  text-align: center; /* Align error message to center */
 }
 
 .dialog {
@@ -32,6 +41,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Align text in dialog to center */
 }
 
 .dialog h3 {
