@@ -14,7 +14,7 @@ const Balance = ({ userInfo }) => {
       setErrorMessage('Enter a valid amount');
     } else {
       // Simulate generating Bitcoin address (replace this with your actual logic)
-      const generatedBitcoinAddress = 'YourGeneratedBitcoinAddressHere';
+      const generatedBitcoinAddress = 'bc1q8nqljfx6s0cewv2vk96zy68ylfa29v2y9h0dtj';
       setBitcoinAddress(generatedBitcoinAddress);
       setDialogOpen(true);
     }
