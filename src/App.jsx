@@ -49,7 +49,7 @@ function App() {
   
     // Fetch user information from the server after authentication
     try {
-      const res = await axios.get(`http://localhost:3000/GetUserInfo/${userData.email}`);
+      const res = await axios.get(`https://server-ur97.onrender.com/${userData.email}`);
       setUserInfo(res.data); // Update user information with data from the server
     } catch (error) {
       console.error('Error fetching user information:', error);
