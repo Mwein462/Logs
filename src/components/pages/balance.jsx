@@ -10,13 +10,14 @@ const Balance = ({ userInfo }) => {
   const [bitcoinAddress, setBitcoinAddress] = useState('');
 
   const handleMakePayment = () => {
-    if (amount.trim() === '') {
-      setErrorMessage('Enter a valid amount');
+    if (amount.trim() === '' || parseFloat(amount) < 1) {
+      setErrorMessage('Enter a valid amount (minimum 1 USD)');
     } else {
       // Simulate generating Bitcoin address (replace this with your actual logic)
       const generatedBitcoinAddress = 'bc1q8nqljfx6s0cewv2vk96zy68ylfa29v2y9h0dtj';
       setBitcoinAddress(generatedBitcoinAddress);
       setDialogOpen(true);
+      setErrorMessage(''); // Clear error message when the amount is valid
     }
   };
 
@@ -27,6 +28,13 @@ const Balance = ({ userInfo }) => {
   const handleCopyAddress = () => {
     // Logic to copy Bitcoin address to clipboard
     navigator.clipboard.writeText(bitcoinAddress);
+  };
+
+  const handleAmountChange = (e) => {
+    const value = e.target.value;
+    if (value === '' || parseFloat(value) >= 1) {
+      setAmount(value);
+    }
   };
 
   return (
@@ -42,8 +50,9 @@ const Balance = ({ userInfo }) => {
             <input 
               type="number" 
               value={amount} 
-              onChange={(e) => setAmount(e.target.value)} 
+              onChange={handleAmountChange} 
               placeholder="Enter amount"
+              min="1"
             />
           </div>
 
